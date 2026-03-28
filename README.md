@@ -10,11 +10,14 @@ mvn spring-boot:run
 App runs at:
 `http://localhost:8080`
 
+### Postman Collection (Sample API Requests)
+
+[Performance Tracker APIs.postman_collection.json](https://github.com/user-attachments/files/26323471/Performance.Tracker.APIs.postman_collection.json)
+
 ### H2 Console
 
 `http://localhost:8080/h2-console`
 
-Use:
 
 * JDBC URL: `jdbc:h2:mem:emp_performance_tracker`
 * Username: `sa`
