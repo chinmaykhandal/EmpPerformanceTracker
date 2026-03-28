@@ -3,8 +3,8 @@ package com.performancetracker.PerformanceTracker.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "goal")
-public class Goal {
+@Table(name = "goals")
+public class Goals {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
