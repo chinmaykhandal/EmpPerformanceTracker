@@ -1,9 +1,16 @@
 # Employee Performance Tracker API
 
+## Requirements
 
-### Run Locally
-Right click on PerformanceTrackerApplication.java file and run or
+* Java 17+
+* Spring Boot 4.0.0
+* Maven 3.8+
+
+## Run Locally
+
 ```bash
+git clone https://github.com/chinmaykhandal/EmpPerformanceTracker.git
+cd PerformanceTracker
 mvn spring-boot:run
 ```
 
@@ -14,12 +21,12 @@ App runs at:
 
 [Performance Tracker APIs.postman_collection.json](https://github.com/user-attachments/files/26323471/Performance.Tracker.APIs.postman_collection.json)
 
-### H2 Console
+## H2 Console
 
 `http://localhost:8080/h2-console`
+Use:
 
-
-* JDBC URL: `jdbc:h2:mem:emp_performance_tracker`
+* JDBC URL: `jdbc:h2:mem:testdb`
 * Username: `sa`
 * Password: *(leave empty)*
 
@@ -29,7 +36,7 @@ App runs at:
 * Schema + sample data auto-load from `schema.sql`
 * No external setup required
 
-### System Design Notes
+### System Design - Short Write Up
 
 * **500 concurrent managers**
 
@@ -41,7 +48,7 @@ App runs at:
     * `employee_id`
     * `department`
     * `(review_cycle_id, status)`
-  * Use **PostgreSQL read replicas** in production for report traffic
+  * Use **DB read replicas** in production for report traffic
 
 * **If `/cycles/{id}/summary` slows at 100k+ reviews**
 
